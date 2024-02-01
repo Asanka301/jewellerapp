@@ -3,23 +3,22 @@ import { products } from "../../data/Data";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cartSlice";
 import { Link, useNavigate } from "react-router-dom";
-import filterItems from "../../components/Products";
 
 export default function Shop() {
   const [qty, setQty] = useState(1);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleAddToCart = (product) => {
-    let totalPrice = qty * product.price;
-    const tempProduct = {
-      ...product,
-      qunatity: qty,
-      totalPrice,
-    };
-    dispatch(addToCart(tempProduct));
-    // navigate("/cart");
-  };
+  // const handleAddToCart = (product) => {
+  //   let totalPrice = qty * product.price;
+  //   const tempProduct = {
+  //     ...product,
+  //     qunatity: qty,
+  //     totalPrice,
+  //   };
+  //   dispatch(addToCart(tempProduct));
+  //   // navigate("/cart");
+  // };
 
   const [menuItems, setMenuItem] = useState(products);
   const [rangeValue, setRangeValue] = useState(0);
@@ -85,6 +84,8 @@ export default function Shop() {
                   <h2>{totalItemCount} item(s)</h2>
                 </div>
               </div>
+
+              {/* ---- Filter by Karatage----- */}
 
               <div className="row g-4">
                 <div className="col-lg-3">
@@ -155,6 +156,8 @@ export default function Shop() {
                       </div>
                     </div>
 
+                    {/* ---- Filter by Metal----- */}
+
                     <div className="col-lg-12">
                       <div className="mb-3">
                         <h4>Metal</h4>
@@ -218,6 +221,8 @@ export default function Shop() {
                         </ul>
                       </div>
                     </div>
+
+                    {/* ---- Filter by price----- */}
 
                     <div className="col-lg-12">
                       <div className="row g-4">

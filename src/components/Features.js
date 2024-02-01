@@ -1,5 +1,5 @@
 import React from "react";
-import { features } from "../data/Data";
+
 import CustomButton from "../common/Button";
 
 export default function Features() {
@@ -76,10 +76,31 @@ export default function Features() {
         <div className="container py-5 ">
           <div className="row g-5 align-items-center">
             <div className="col-md-12 col-lg-7">
-              <div className="">
-                <img src="../assets/img/image3.png" />
+              <div
+                className="col-md-12 col-lg-7"
+                style={{ position: "relative" }}
+              >
+                <div className="">
+                  <img
+                    src="../assets/img/image3.png"
+                    alt="Main Image"
+                    style={{ width: "100%" }}
+                  />
+                  <img
+                    src="../assets/img/image4.png"
+                    alt="Small Image"
+                    style={{
+                      position: "absolute",
+                      bottom: 0,
+                      right: "-100px",
+                      width: "300px",
+                      height: "auto",
+                    }}
+                  />
+                </div>
               </div>
             </div>
+
             <div className="col-md-12 col-lg-5">
               <h1 className="mb-5 display-3 text-primary">
                 Jewellery that as beautiful as you are
