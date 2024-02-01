@@ -83,12 +83,12 @@ export default function Features() {
                 <div className="">
                   <img
                     src="../assets/img/image3.png"
-                    alt="Main Image"
+                    alt="Main "
                     style={{ width: "100%" }}
                   />
                   <img
                     src="../assets/img/image4.png"
-                    alt="Small Image"
+                    alt="Small "
                     style={{
                       position: "absolute",
                       bottom: 0,

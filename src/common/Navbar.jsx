@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import TopBar from "./TopBar";
+
 import { useDispatch, useSelector } from "react-redux";
 import { getCartTotal } from "../store/cartSlice";
 
@@ -18,12 +18,18 @@ export default function Navbar() {
         {/* <TopBar /> */}
         <div className="container px-0">
           <nav className="navbar navbar-light bg-white navbar-expand-xl">
-            <Link to="/" className="navbar-brand">
-              <h1 className="text-primary display-6">
+            <Link to="/" className="navbar-brand d-flex align-items-center">
+              <img
+                src="../assets/img/logo.png"
+                alt="Logo"
+                className="logo-image me-2"
+              />
+              <h1 className="text-primary display-6 mb-0">
                 <span className="fa-solid fa-box-archive text-primary"></span>
                 Treasure
               </h1>
             </Link>
+
             <button
               className="navbar-toggler py-2 px-3"
               type="button"

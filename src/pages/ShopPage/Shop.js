@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { products } from "../../data/Data";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../store/cartSlice";
+// import { addToCart } from "../../store/cartSlice";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Shop() {
