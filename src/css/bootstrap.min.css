@@ -3738,10 +3738,11 @@ fieldset:disabled .btn {
   color: #000000;
 }
 .foot-item {
+  font-size: 12px;
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: "Raleway", sans-serif;
-  font-weight: 600;
+  font-weight: 100;
   line-height: 1.2;
   color: #ffffff;
 }
