@@ -60,7 +60,10 @@ export default function Products() {
                     <h2>Featured Products</h2>
                   </div>
                   <div className="col-lg-8 text-end">
-                    <ul className="nav nav-pills d-inline-flex text-center mb-6 d-lg-inline-flex">
+                    <ul
+                      className="nav nav-pills d-inline-flex text-center mb-6 d-lg-inline-flex"
+                      key={products.id}
+                    >
                       <li className="nav-item">
                         <a
                           className="m-2 py-2 bg-light  active"
