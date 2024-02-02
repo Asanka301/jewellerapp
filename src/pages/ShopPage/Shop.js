@@ -61,10 +61,10 @@ export default function Shop() {
   };
   return (
     <>
-      <div className="container-fluid fruite py-5">
+      <div className="container-fluid fruite py-0">
         <div className="container py-5">
           <div className="row g-4">
-            <div className="col-lg-10 mt-2  ">
+            <div className="col-lg-12 mt-2  ">
               <div className="row g-4 mt-4">
                 <div className="col-xl-3 d-flex justify-content-start align-items-center">
                   <h3>Filters</h3>
