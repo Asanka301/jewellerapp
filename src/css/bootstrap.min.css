@@ -163,6 +163,14 @@ h4,
     font-size: 1.5rem;
   }
 }
+
+@media (max-width: 768px) {
+  h4,
+  .h4 {
+    font-size: 1rem;
+  }
+}
+
 h5,
 .h5 {
   font-size: 1.25rem;
@@ -3312,7 +3320,7 @@ fieldset:disabled .btn {
   margin: 0;
   font-size: 1rem;
   color: #747d88;
-  text-align: left;
+  text-align: center;
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
@@ -3751,6 +3759,19 @@ fieldset:disabled .btn {
 .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #81c408;
+}
+
+@media (max-width: 768px) {
+  .nav-pills {
+    /* Adjust the padding or margins to reduce the gap between items */
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .nav-pills .nav-item {
+    /* Adjust the padding or margins of each item to reduce the gap */
+    margin-right: 2px;
+  }
 }
 .nav-fill > .nav-link,
 .nav-fill .nav-item {
