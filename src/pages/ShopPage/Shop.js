@@ -32,6 +32,8 @@ export default function Shop() {
     filterItems("all", value); // Assuming FilterItems is in the same component scope
   };
 
+  //  function to filter items
+
   const filterItems = (category, price, id) => {
     let newItems;
 
@@ -79,6 +81,7 @@ export default function Shop() {
               </div>
 
               <hr className="my-4 mb-4 mt-2" />
+
               {/* ---- Filter by Karatage----- */}
 
               <div className="row g-4">
