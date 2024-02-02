@@ -64,14 +64,17 @@ export default function Shop() {
       <div className="container-fluid fruite py-0">
         <div className="container py-5">
           <div className="row g-4">
-            <div className="col-lg-12 mt-2  ">
+            <div className="col-lg-12 mt-0  ">
               <div className="row g-4 mt-4">
-                <div className="col-xl-3 d-flex justify-content-start align-items-center">
-                  <h3>Filters</h3>
-                </div>
                 <div className="col-xl-6"></div>
-                <div className="col-xl-3 d-flex justify-content-end align-items-center">
-                  <h3>{totalItemCount} item(s)</h3>
+                <div className="row g-4 mt-4">
+                  <div className="col-xl-3 d-flex justify-content-start align-items-center">
+                    <h3>Filters</h3>
+                  </div>
+                  <div className="col-xl-6"></div>
+                  <div className="col-xl-3 d-none d-xl-flex justify-content-end align-items-center">
+                    <h3>{totalItemCount} item(s)</h3>
+                  </div>
                 </div>
               </div>
 
