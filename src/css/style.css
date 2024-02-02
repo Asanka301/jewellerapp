@@ -1,6 +1,6 @@
 /*** Spinner Start ***/
 h1 {
-  font-family: "Italiana", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 #spinner {
@@ -76,54 +76,12 @@ h1 {
   color: var(--bs-white) !important;
 }
 
-/*** Topbar Start ***/
-.fixed-top {
-  transition: 0.5s;
-  background: var(--bs-white);
-  border: 0;
-}
-
-.topbar {
-  padding: 20px;
-  border-radius: 230px 100px;
-}
-
-.topbar .top-info {
-  font-size: 15px;
-  line-height: 0;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-}
-
-.topbar .top-link {
-  font-size: 15px;
-  line-height: 0;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-}
-
-.topbar .top-link a {
-  letter-spacing: 1px;
-}
-
-.topbar .top-link a small:hover {
-  color: var(--bs-secondary) !important;
-  transition: 0.5s;
-}
-
-.topbar .top-link a small:hover i {
-  color: var(--bs-primary) !important;
-}
-/*** Topbar End ***/
-
 /*** Navbar Start ***/
 
 .navbar .navbar-nav .nav-link {
   padding: 10px 25px;
 
-  font-size: 16px;
+  font-size: 22px;
   transition: 0.5s;
 }
 
@@ -183,7 +141,7 @@ h1 {
 /*** Hero Header ***/
 .hero-header {
   width: 2701px; /* Set the width to 100% */
-  height: 844px; /* Set the height to 400 pixels */
+  height: 744px; /* Set the height to 400 pixels */
   background: linear-gradient(
       rgba(248, 223, 173, 0.1),
       rgba(248, 223, 173, 0.1)

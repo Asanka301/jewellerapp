@@ -28,7 +28,6 @@ export default function Footer() {
         <div className="container">
           <div className="container py-5">
             <div className="row g-5">
-              {/* First div on the left */}
               <div className="col-lg-3 col-md-6">
                 <a href="#">
                   <div>
@@ -37,17 +36,17 @@ export default function Footer() {
                         src="../assets/img/logo.png"
                         alt="Logo"
                         className="logo-image me-2"
+                        style={{ width: "80px", height: "80px" }}
                       />
                       Treasure
                     </h1>
-                    <p className=" mb-0 foot-item">
+                    <p className=" mb-2  foot-item">
                       Every sparkle a stolen glance
                     </p>
                   </div>
                 </a>
               </div>
 
-              {/* Other three divs on the right */}
               <div className="col-lg-9 col-md-6">
                 <div className="row g-5">
                   <div className="col-lg-4 col-md-12">
@@ -80,7 +79,6 @@ export default function Footer() {
                       <a href="/" className="mb-3 foot-item">
                         Store Locator
                       </a>
-                      {/* Links */}
                     </div>
                   </div>
                   <div className="col-lg-4 col-md-12">
@@ -89,10 +87,10 @@ export default function Footer() {
                       <a href="/" className="mb-3 foot-item">
                         Instagram
                       </a>
+
                       <a href="/" className="mb-3 foot-item">
                         Facebook
                       </a>
-                      {/* Links */}
                     </div>
                   </div>
                 </div>

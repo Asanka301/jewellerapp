@@ -68,29 +68,58 @@ hr {
 hr:not([size]) {
   height: 1px;
 }
-h6,
-.h6,
+
 h5,
 .h5,
-h3,
-.h3,
 h2,
-.h2,
+.h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #000000;
+}
+
+h3,
+.h3 {
+  margin-top: 5px;
+  margin-bottom: 0.5rem;
+  font-family: "Italiana", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #131212;
+}
+h6,
+.h6 {
+  margin-top: 5px;
+  margin-bottom: 0.5rem;
+  font-family: "Italiana", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #131212;
+}
+.form-check-label {
+  font-family: "Italiana", sans-serif;
+  font-size: large;
+}
+
 h1,
 .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: "Italiana", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
   color: #9a8350;
 }
+
 h4,
 .h4 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   line-height: 1.2;
   color: #000000;
 }
@@ -178,7 +207,7 @@ ul ol {
 ul {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   line-height: 1.2;
   color: #45595b;
@@ -220,8 +249,10 @@ sup {
   top: -0.5em;
 }
 a {
+  font-size: 20px;
   color: #ffffff;
   text-decoration: none;
+  font-weight: 200;
 }
 a:hover {
   color: #9a8350;
@@ -412,7 +443,7 @@ output {
   display: inline-block;
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   line-height: 1.2;
   color: #45595b;
@@ -559,6 +590,7 @@ progress {
 .container-md,
 .container-sm {
   width: 100%;
+
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
@@ -2079,6 +2111,7 @@ textarea.form-control-lg {
   margin-left: -1.5em;
 }
 .form-check-input {
+  font-family: "Italiana", sans-serif;
   width: 1em;
   height: 1em;
   margin-top: 0.25em;
@@ -2109,8 +2142,8 @@ textarea.form-control-lg {
   box-shadow: 0 0 0 0.25rem rgba(129, 196, 8, 0.25);
 }
 .form-check-input:checked {
-  background-color: #81c408;
-  border-color: #81c408;
+  background-color: #9a8350;
+  border-color: #9a8350;
 }
 .form-check-input:checked[type="checkbox"] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
@@ -2119,8 +2152,8 @@ textarea.form-control-lg {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
 }
 .form-check-input[type="checkbox"]:indeterminate {
-  background-color: #81c408;
-  border-color: #81c408;
+  background-color: #9a8350;
+  border-color: #9a8350;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
 .form-check-input:disabled {
@@ -2195,7 +2228,7 @@ textarea.form-control-lg {
   width: 1rem;
   height: 1rem;
   margin-top: -0.25rem;
-  background-color: #81c408;
+  background-color: #9a8350;
   border: 0;
   border-radius: 1rem;
   -webkit-transition: background-color 0.15s ease-in-out,
@@ -2226,7 +2259,7 @@ textarea.form-control-lg {
 .form-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
-  background-color: #81c408;
+  background-color: #9a8350;
   border: 0;
   border-radius: 1rem;
   -moz-transition: background-color 0.15s ease-in-out,
@@ -2470,11 +2503,11 @@ textarea.form-control.is-valid {
 }
 .was-validated .form-check-input:valid,
 .form-check-input.is-valid {
-  border-color: #198754;
+  border-color: #9a8350;
 }
 .was-validated .form-check-input:valid:checked,
 .form-check-input.is-valid:checked {
-  background-color: #198754;
+  background-color: #9a8350;
 }
 .was-validated .form-check-input:valid:focus,
 .form-check-input.is-valid:focus {
@@ -2482,7 +2515,7 @@ textarea.form-control.is-valid {
 }
 .was-validated .form-check-input:valid ~ .form-check-label,
 .form-check-input.is-valid ~ .form-check-label {
-  color: #198754;
+  color: #9a8350;
 }
 .form-check-inline .form-check-input ~ .valid-feedback {
   margin-left: 0.5em;
@@ -3641,11 +3674,12 @@ fieldset:disabled .btn {
   list-style: none;
 }
 .nav-link {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: #81c408;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000000;
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
@@ -3690,10 +3724,10 @@ fieldset:disabled .btn {
 .nav-item {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   line-height: 1.2;
-  color: #45595b;
+  color: #000000;
 }
 .foot-item {
   margin-top: 0;
@@ -6874,7 +6908,7 @@ fieldset:disabled .btn {
   color: #9a8350 !important;
 }
 .text-secondary {
-  color: #ffb524 !important;
+  color: #000000 !important;
 }
 .text-success {
   color: #198754 !important;

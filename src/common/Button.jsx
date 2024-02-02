@@ -11,8 +11,8 @@ const CustomButton = ({ onClick, children, style }) => {
         padding: "12px 24px", // Increased padding for longer button
         borderRadius: "4px", // Default border radius
         cursor: "pointer", // Show pointer on hover
-        width: "200px",
-        fontFamily: "Arial, sans-serif", // Change font family
+        width: "300px",
+        fontFamily: "Poppins, sans-serif", // Change font family
         ...style, // Allow overriding default styles
       }}
     >

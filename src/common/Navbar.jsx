@@ -1,23 +1,18 @@
-import React, { useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { useDispatch, useSelector } from "react-redux";
-import { getCartTotal } from "../store/cartSlice";
-
 export default function Navbar() {
-  const dispatch = useDispatch();
-  const { totalItems } = useSelector((state) => state.cart);
-  console.log(totalItems);
-  useEffect(() => {
-    dispatch(getCartTotal());
-  }, []);
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsNavbarOpen(!isNavbarOpen);
+  };
 
   return (
     <>
-      <div className="container-fluid fixed-top">
-        {/* <TopBar /> */}
-        <div className="container px-0">
-          <nav className="navbar navbar-light bg-white navbar-expand-xl">
+      <div className="container-fluid px-0 ">
+        <nav className="navbar navbar-expand-lg navbar-light bg-white w-100">
+          <div className="container pt-3">
             <Link to="/" className="navbar-brand d-flex align-items-center">
               <img
                 src="../assets/img/logo.png"
@@ -31,75 +26,43 @@ export default function Navbar() {
             </Link>
 
             <button
-              className="navbar-toggler py-2 px-3"
+              className={`navbar-toggler ${isNavbarOpen ? "collapsed" : ""}`}
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarCollapse"
+              onClick={toggleNavbar}
+              aria-label="Toggle navigation"
             >
-              <span className="fa fa-bars text-primary"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
+
             <div
-              className="collapse navbar-collapse bg-white"
-              id="navbarCollapse"
+              className={`collapse navbar-collapse ${
+                isNavbarOpen ? "show" : ""
+              } bg-white`}
             >
               <div className="navbar-nav ms-auto">
-                {" "}
-                {/* Changed from mx-auto to ms-auto */}
-                <Link to="/" className="nav-item nav-link active">
+                <Link to="/" className="nav-item nav-link active me-3">
                   Home
                 </Link>
-                <Link to="/shop" className="nav-item nav-link">
+                <Link to="/shop" className="nav-item nav-link me-3">
                   Bridal
                 </Link>
-                <Link to="/shop" className="nav-item nav-link">
+                <Link to="/shop" className="nav-item nav-link me-3">
                   Exclusive
                 </Link>
-                <div className="nav-item dropdown">
-                  <Link
-                    className="nav-link dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                  >
-                    Collection
-                  </Link>
-                  <div className="dropdown-menu m-0 bg-secondary rounded-0">
-                    <Link to="/shop" className="dropdown-item">
-                      Necklaces
-                    </Link>
-                    <Link to="/shop" className="dropdown-item">
-                      Bracelets
-                    </Link>
-                    <Link to="/shop" className="dropdown-item">
-                      Ear studs
-                    </Link>
-                    <Link to="/shop" className="dropdown-item">
-                      All
-                    </Link>
-                  </div>
-                </div>
-                <Link to="#" className="nav-item nav-link">
+                <Link to="/shop" className="nav-item nav-link me-3">
+                  Collections
+                </Link>
+                <Link to="#" className="nav-item nav-link me-3">
                   About
                 </Link>
-                <Link
-                  to="/cart"
-                  className="position-relative text-primary me-4 my-auto"
-                >
-                  <i className="fa fa-shopping-bag fa-2x"></i>
-                  <span
-                    className="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
-                    style={{
-                      top: "-5px",
-                      left: "15px",
-                      height: "20px",
-                      minWidth: "20px",
-                    }}
-                  >
-                    {totalItems}
-                  </span>
+                <Link to="/cart" className="nav-item nav-link me-3">
+                  <i className="fa fa-shopping-bag fa-sm me-1"></i>
+                  <span className="d-none d-md-inline"></span>
                 </Link>
               </div>
             </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </div>
     </>
   );

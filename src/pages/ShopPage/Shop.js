@@ -61,30 +61,21 @@ export default function Shop() {
   };
   return (
     <>
-      {/* <div class="container-fluid page-header py-5">
-        <h1 class="text-center text-white display-6">Shop</h1>
-        <ol class="Necklacecrumb justify-content-center mb-0">
-          <Link to="/" class="Necklacecrumb-item">
-            <a href="#">Home</a>
-          </Link>
-          <li class="Necklacecrumb-item active text-white">Shop</li>
-        </ol>
-      </div> */}
-
       <div className="container-fluid fruite py-5">
         <div className="container py-5">
           <div className="row g-4">
-            <div className="col-lg-12">
-              <div className="row g-4">
-                <div className="col-xl-3">
-                  <h1 className="mb-4">Filters</h1>
+            <div className="col-lg-10 mt-2  ">
+              <div className="row g-4 mt-4">
+                <div className="col-xl-3 d-flex justify-content-start align-items-center">
+                  <h3>Filters</h3>
                 </div>
                 <div className="col-xl-6"></div>
-                <div className="col-xl-3 text-end">
-                  <h2>{totalItemCount} item(s)</h2>
+                <div className="col-xl-3 d-flex justify-content-end align-items-center">
+                  <h3>{totalItemCount} item(s)</h3>
                 </div>
               </div>
 
+              <hr className="my-4 mb-4 mt-2" />
               {/* ---- Filter by Karatage----- */}
 
               <div className="row g-4">
@@ -92,7 +83,7 @@ export default function Shop() {
                   <div className="row g-4">
                     <div className="col-lg-12">
                       <div className="mb-3">
-                        <h4>Karatage</h4>
+                        <h3>Karatage</h3>
                         <ul className="list-unstyled fruite-categories">
                           <li key={products.id}>
                             <div className="form-check d-flex justify-content-between align-items-center fruite-name">
@@ -160,7 +151,7 @@ export default function Shop() {
 
                     <div className="col-lg-12">
                       <div className="mb-3">
-                        <h4>Metal</h4>
+                        <h3>Metal</h3>
                         <ul className="list-unstyled fruite-categories">
                           <li key={products.id}>
                             <div className="form-check d-flex justify-content-between fruite-name">
@@ -248,45 +239,34 @@ export default function Shop() {
                 <div className="col-lg-9">
                   {menuItems.length === 0 ? (
                     <div className="container text-center">
-                      <h3>No Jewelry to display</h3>
-                      <p>
+                      <h1 className="text-primary display-6 mb-4">
+                        <span className="fa-solid fa-box-archive text-primary"></span>
+                        No Jewelry to display
+                      </h1>
+                      <h5>
                         Right now, we don’t have Jewelry for this filters, But
-                        we’ll full-fill your need soon!
-                      </p>
+                      </h5>
+                      <h5>we’ll full-fill your need soon!</h5>
                     </div>
                   ) : (
                     <div className="row g-2">
                       {menuItems.map((val, index) => (
-                        <div className="col-md-6 col-lg-4 col-xl-4" key={index}>
+                        <div className="col-md-6 col-lg-4 col-xl-3" key={index}>
                           <div className="rounded position-relative fruite-item">
                             <div className="fruite-img">
                               <img
                                 src={val.product_img}
-                                style={{ width: "500px", height: "200px" }} // Adjust width as needed
+                                style={{ width: "500px", height: "300px" }} // Adjust width as needed
                                 className="img-fluid rounded-top"
-                                alt=""
+                                alt={val.description}
                               />
                             </div>
-                            <div
-                              className="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                              style={{ top: "10px", left: "10px" }}
-                            >
-                              {val.category}
-                            </div>
-                            <div className="p-4 border-secondary border-top-4  rounded-bottom">
-                              <h4>{val.product_name}</h4>
-                              {/* <p>{val.description}</p> */}
+
+                            <div className="p-2  border-secondary border-top-4  rounded-bottom">
+                              <h6>{val.product_name}</h6>
+
                               <div className="p-2  border-secondary border-top-4  rounded-bottom">
-                                <h4 className="text-dark fs-5   mb-2">
-                                  RS. {val.price}
-                                </h4>
-                                {/* <button
-                                  onClick={() => handleAddToCart(val)}
-                                  className="btn border border-secondary rounded-pill px-3 text-primary"
-                                >
-                                  <i className="fa fa-shopping-bag me-2 text-primary"></i>{" "}
-                                  Add to cart
-                                </button> */}
+                                <h4 className="">RS. {val.price}</h4>
                               </div>
                             </div>
                           </div>
