@@ -1,31 +1,14 @@
 import React, { useState } from "react";
 import { products } from "../../data/Data";
-import { useDispatch } from "react-redux";
-// import { addToCart } from "../../store/cartSlice";
-import { Link, useNavigate } from "react-router-dom";
 
 export default function Shop() {
-  const [qty, setQty] = useState(1);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  // const handleAddToCart = (product) => {
-  //   let totalPrice = qty * product.price;
-  //   const tempProduct = {
-  //     ...product,
-  //     qunatity: qty,
-  //     totalPrice,
-  //   };
-  //   dispatch(addToCart(tempProduct));
-  //   // navigate("/cart");
-  // };
-
   const [menuItems, setMenuItem] = useState(products);
   const [rangeValue, setRangeValue] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const totalItemCount = products.length;
 
+  // Handle range input change
   const handleRangeChange = (event, category) => {
     const value = event.target.value;
     setRangeValue(value);
@@ -37,12 +20,14 @@ export default function Shop() {
   const filterItems = (category, price, id) => {
     let newItems;
 
+    // Filter by category
     if (category === "all") {
       newItems = products;
     } else {
       newItems = products.filter((item) => item.category === category);
     }
 
+    // Filter by price
     if (price !== undefined) {
       newItems = newItems.filter((item) => item.price <= price);
     }
@@ -53,10 +38,7 @@ export default function Shop() {
     setMenuItem(newItems);
   };
 
-  const getCategoryItemCount = (category) => {
-    return menuItems.filter((item) => item.category === category).length;
-  };
-
+  // Handle checkbox change
   const handleCheckboxChange = (category) => {
     setSelectedCategory(category);
     filterItems(category, rangeValue);

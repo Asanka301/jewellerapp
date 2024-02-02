@@ -31,7 +31,13 @@ export default function Navbar() {
               onClick={toggleNavbar}
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon"></span>
+              {isNavbarOpen ? (
+                <span className="fas fa-solid fa-xmark" aria-hidden="true">
+                  &times;
+                </span>
+              ) : (
+                <span className="navbar-toggler-icon"></span>
+              )}
             </button>
 
             <div
